@@ -232,11 +232,20 @@
                                     <action selector="pressButton:" destination="LKE-gf-sUM" eventType="touchUpInside" id="fmg-Nr-ATc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwg-aw-ddJ">
+                                <rect key="frame" x="54" y="143" width="287" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mnU-OX-YGm"/>
                         <color key="backgroundColor" red="0.93134762542416349" green="0.93134762542416349" blue="0.93134762542416349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="nextDigit" destination="zwg-aw-ddJ" id="8CK-KJ-VEU"/>
+                        <outlet property="statusLabel" destination="MvQ-ol-jjJ" id="thn-7g-jsc"/>
                         <outletCollection property="buttons" destination="gVS-Hp-bRL" collectionClass="NSMutableArray" id="LoT-Pf-i6z"/>
                         <outletCollection property="buttons" destination="9xy-f3-JmN" collectionClass="NSMutableArray" id="IaT-q6-62Y"/>
                         <outletCollection property="buttons" destination="XzO-TO-DiK" collectionClass="NSMutableArray" id="jRc-3j-KFh"/>
@@ -257,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXF-ck-wcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253.62318840579712" y="-120.53571428571428"/>
+            <point key="canvasLocation" x="252.30769230769229" y="-120.85308056872037"/>
         </scene>
     </scenes>
     <resources>
