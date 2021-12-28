@@ -47,7 +47,8 @@ class GameViewController: UIViewController {
         
         for index in game.items.indices{
             buttons[index].setTitle(game.items[index].title, for: .normal) //сменили цифры на кнопки
-            buttons[index].isHidden = false //чтобы все кнопки были видны
+            buttons[index].alpha = 1
+            buttons[index].isEnabled = true
             
             
         }
@@ -57,7 +58,9 @@ class GameViewController: UIViewController {
     
     private func updateUI(){
         for index in game.items.indices{
-            buttons[index].isHidden = game.items[index].isFound
+            buttons[index].alpha = game.items[index].isFound ? 0 : 1
+            buttons[index].isEnabled = !game.items[index].isFound
+            
             if game.items[index].isError{
                 UIView.animate(withDuration: 0.3) { [weak self] in
                     self?.buttons[index].backgroundColor = .red
