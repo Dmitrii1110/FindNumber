@@ -9,37 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Желтый-->
-        <scene sceneID="SIj-SJ-J1D">
-            <objects>
-                <viewController id="kzZ-rg-kxA" customClass="YellowViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7nN-X4-P0c">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBN-RH-vmb">
-                                <rect key="frame" x="162" y="393" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Синий"/>
-                                <connections>
-                                    <action selector="goToBlueController:" destination="kzZ-rg-kxA" eventType="touchUpInside" id="Tcc-xx-whH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="z9G-Z2-TRv"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Желтый" id="nDf-LM-kbd"/>
-                    <connections>
-                        <segue destination="UGM-CV-pqn" kind="show" identifier="goToBlue" id="p1M-Pf-2ZP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ALQ-XM-1Lf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-559" y="-775"/>
-        </scene>
         <!--Меню-->
         <scene sceneID="5hk-n2-oHO">
             <objects>
@@ -65,9 +34,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Настройки"/>
-                                        <connections>
-                                            <segue destination="kzZ-rg-kxA" kind="show" id="A7R-VS-Qpn"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEb-rw-u2R">
                                         <rect key="frame" x="0.0" y="142" width="123" height="41"/>
@@ -388,57 +354,6 @@
             </objects>
             <point key="canvasLocation" x="1181.5384615384614" y="-120.85308056872037"/>
         </scene>
-        <!--Синий-->
-        <scene sceneID="hMf-oC-Aoy">
-            <objects>
-                <viewController id="UGM-CV-pqn" customClass="BlueViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mN9-mD-MeH">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OFJ-xd-nHV"/>
-                        <color key="backgroundColor" systemColor="tintColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Синий" id="E28-ZI-kSB">
-                        <barButtonItem key="rightBarButtonItem" title="Зеленый" id="jjh-sR-HhC">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="goToGreenController:" destination="UGM-CV-pqn" id="0Kr-cg-Hee"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D0K-eK-ceu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="252" y="-776"/>
-        </scene>
-        <!--Green View Controller-->
-        <scene sceneID="DnP-Di-FHM">
-            <objects>
-                <viewController storyboardIdentifier="greenVC" id="PVN-gE-Kna" customClass="GreenViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WL6-V0-tLQ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1q-x4-Pu8">
-                                <rect key="frame" x="104" y="370" width="182" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="К желтому"/>
-                                <connections>
-                                    <action selector="goToRoot:" destination="PVN-gE-Kna" eventType="touchUpInside" id="aO2-XN-xT8"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="apc-Bd-p09"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="egp-6J-cco"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ch-nS-tbm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1060" y="-776.30331753554503"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tdF-Re-9Ua">
             <objects>
@@ -468,15 +383,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
