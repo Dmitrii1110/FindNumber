@@ -34,12 +34,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Настройки"/>
+                                        <connections>
+                                            <segue destination="TbJ-di-dIj" kind="show" id="ZCz-Hj-G2w"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEb-rw-u2R">
                                         <rect key="frame" x="0.0" y="142" width="123" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Рекорд"/>
+                                        <connections>
+                                            <segue destination="RDc-eP-mtt" kind="show" id="Y2G-9B-wvu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -353,6 +359,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXF-ck-wcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1181.5384615384614" y="-120.85308056872037"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="vjM-LG-ipa">
+            <objects>
+                <tableViewController id="TbJ-di-dIj" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ob8-YL-axr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wNa-f7-hTC">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wNa-f7-hTC" id="bXt-JR-Evj">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TbJ-di-dIj" id="aE6-8O-pkg"/>
+                            <outlet property="delegate" destination="TbJ-di-dIj" id="Tqj-Cc-wn0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Настройки" id="qW0-Mb-rE9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEe-03-SIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-563" y="-876"/>
+        </scene>
+        <!--Рекорд-->
+        <scene sceneID="Sbo-lJ-73O">
+            <objects>
+                <viewController id="RDc-eP-mtt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ftM-v9-s4I">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1nZ-ot-hMt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Рекорд" id="ae3-fK-C6T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRv-P3-in5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="-877"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tdF-Re-9Ua">
