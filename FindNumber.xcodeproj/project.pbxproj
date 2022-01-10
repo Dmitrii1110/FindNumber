@@ -16,11 +16,9 @@
 		B28A68002778618E005050B8 /* FindNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28A67FF2778618E005050B8 /* FindNumberTests.swift */; };
 		B28A680A2778618E005050B8 /* FindNumberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28A68092778618E005050B8 /* FindNumberUITests.swift */; };
 		B28A680C2778618E005050B8 /* FindNumberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28A680B2778618E005050B8 /* FindNumberUITestsLaunchTests.swift */; };
-		B28ADE19277B91BA002A40C5 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ADE18277B91BA002A40C5 /* YellowViewController.swift */; };
-		B28ADE1B277C77A7002A40C5 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ADE1A277C77A7002A40C5 /* BlueViewController.swift */; };
-		B28ADE1D277C8008002A40C5 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ADE1C277C8008002A40C5 /* GreenViewController.swift */; };
 		B28ADE1F277CE37B002A40C5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ADE1E277CE37B002A40C5 /* SelectTimeViewController.swift */; };
 		B28ADE21277CE6FA002A40C5 /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ADE20277CE6FA002A40C5 /* SettingsTableTableViewController.swift */; };
+		B28ADE2327818090002A40C5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ADE222781808F002A40C5 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +52,9 @@
 		B28A68052778618E005050B8 /* FindNumberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28A68092778618E005050B8 /* FindNumberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberUITests.swift; sourceTree = "<group>"; };
 		B28A680B2778618E005050B8 /* FindNumberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B28ADE18277B91BA002A40C5 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
-		B28ADE1A277C77A7002A40C5 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
-		B28ADE1C277C8008002A40C5 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		B28ADE1E277CE37B002A40C5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		B28ADE20277CE6FA002A40C5 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
+		B28ADE222781808F002A40C5 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +112,9 @@
 				B28A67F62778618C005050B8 /* Info.plist */,
 				B20018DE2779B92E00B433EA /* GameViewController.swift */,
 				B25412142779D09B00A29070 /* Game.swift */,
-				B28ADE18277B91BA002A40C5 /* YellowViewController.swift */,
-				B28ADE1A277C77A7002A40C5 /* BlueViewController.swift */,
-				B28ADE1C277C8008002A40C5 /* GreenViewController.swift */,
 				B28ADE1E277CE37B002A40C5 /* SelectTimeViewController.swift */,
 				B28ADE20277CE6FA002A40C5 /* SettingsTableTableViewController.swift */,
+				B28ADE222781808F002A40C5 /* Settings.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -273,12 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28ADE1D277C8008002A40C5 /* GreenViewController.swift in Sources */,
 				B28ADE21277CE6FA002A40C5 /* SettingsTableTableViewController.swift in Sources */,
-				B28ADE19277B91BA002A40C5 /* YellowViewController.swift in Sources */,
 				B20018DF2779B92E00B433EA /* GameViewController.swift in Sources */,
 				B25412152779D09B00A29070 /* Game.swift in Sources */,
-				B28ADE1B277C77A7002A40C5 /* BlueViewController.swift in Sources */,
+				B28ADE2327818090002A40C5 /* Settings.swift in Sources */,
 				B28ADE1F277CE37B002A40C5 /* SelectTimeViewController.swift in Sources */,
 				B28A67E927786187005050B8 /* AppDelegate.swift in Sources */,
 			);
@@ -387,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

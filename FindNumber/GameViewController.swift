@@ -14,13 +14,19 @@ class GameViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     
     @IBOutlet weak var newGameButton: UIButton!
-    lazy var game = Game(countItems: buttons.count,time: 30) { [weak self] (status, time) in
+    lazy var game = Game(countItems: buttons.count) { [weak self] (status, time) in
         //?
         
         guard let self = self else {return}
         
         self.timerLabel.text = time.secondsToString()
         self.updateInfoGame(with: status)
+    }
+    
+    //метод когда пользователь выходит из активити (игры)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        game.stopGame()
     }
     
     override func viewDidLoad() {
