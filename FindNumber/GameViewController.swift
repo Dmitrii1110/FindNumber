@@ -94,13 +94,63 @@ class GameViewController: UIViewController {
             statusLabel.text = "Вы выиграли"
             statusLabel.textColor = .green
             newGameButton.isHidden = false
+            if game.isNewRecord{
+                showAlert()
+            } else {
+               showAlertActionSheet()
+            }
             
         case .lose:
             statusLabel.text = "Вы проиграли"
             statusLabel.textColor = .red
             newGameButton.isHidden = false
+            showAlertActionSheet()
         }
     }
     
+    //Создаем алерт
+    private func showAlert(){
+        
+        let alert = UIAlertController(title: "Поздравляем!", message: "Вы установили новый рекорд!", preferredStyle: .alert)
+        //Создаем кнопку, чтобы пользователь мог закрыть алерт
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        //ниже функция показа
+        present(alert, animated: true, completion: nil)
+    }
     
+    private func showAlertActionSheet(){
+        let alert = UIAlertController(title: "Что Вы хотите сделать далее?", message: nil, preferredStyle: .actionSheet)
+        //кнопка начала новой игры
+        let newGameAction = UIAlertAction(title: "Начать новую игру", style: .default) { [weak self] (_) in
+            self?.game.newGame()
+            self?.setupScreen()
+        }
+        //кнопка показать рекорд
+        let showRecord = UIAlertAction(title: "Посмотреть рекорд", style: .default) { [weak self] (_) in
+            
+            self?.performSegue(withIdentifier: "recordVC", sender: nil)
+    }
+        //кнопка перейти в меню
+        let menuAction = UIAlertAction(title: "Перейти в меню", style: .destructive) { [weak self] (_) in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        //кнопка выхода
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+    
+        //добавляем эти кнопки к алерту
+        alert.addAction(newGameAction)
+        alert.addAction(showRecord)
+        alert.addAction(menuAction)
+        alert.addAction(cancelAction)
+        
+        //прописываем возможность показа алерта для айпеда
+        if let popover = alert.popoverPresentationController{
+            popover.sourceView = statusLabel
+        }
+        
+        present(alert, animated: true, completion: nil)
+}
 }

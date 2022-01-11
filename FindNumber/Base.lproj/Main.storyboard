@@ -44,7 +44,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Рекорд"/>
                                         <connections>
-                                            <segue destination="L5o-09-gpu" kind="show" id="Ma1-Bd-cOg"/>
+                                            <segue destination="gIX-jp-HOE" kind="presentation" modalPresentationStyle="fullScreen" id="Ma1-Bd-cOg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -354,6 +354,7 @@
                         <outletCollection property="buttons" destination="WDf-5r-lmo" collectionClass="NSMutableArray" id="Ssu-bq-cLC"/>
                         <outletCollection property="buttons" destination="rq9-uT-MyU" collectionClass="NSMutableArray" id="H8R-Q2-uZt"/>
                         <outletCollection property="buttons" destination="ju1-MA-939" collectionClass="NSMutableArray" id="Roy-wi-zWw"/>
+                        <segue destination="gIX-jp-HOE" kind="presentation" identifier="recordVC" modalPresentationStyle="fullScreen" id="cIQ-fT-qLw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXF-ck-wcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -425,14 +426,14 @@
                             <tableViewSection id="vqT-dk-87d">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wDb-ID-7Iy">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="44.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wDb-ID-7Iy" id="tlg-FS-tZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiL-Xv-nrZ">
-                                                    <rect key="frame" x="30" y="11.666666666666664" width="61" height="21"/>
+                                                    <rect key="frame" x="30" y="11.666666666666666" width="61" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -454,7 +455,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="R78-At-Zg9">
-                                        <rect key="frame" x="0.0" y="88.999998092651367" width="390" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="88.666666030883789" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R78-At-Zg9" id="5H7-r5-CS4">
                                             <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="43.666667938232422"/>
@@ -485,7 +486,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="31W-D4-E7C">
-                                        <rect key="frame" x="0.0" y="132.66666603088379" width="390" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="132.33333396911621" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="31W-D4-E7C" id="Qcc-S0-KGl">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -527,18 +528,39 @@
         <!--Рекорд-->
         <scene sceneID="9MI-xp-Vbr">
             <objects>
-                <viewController id="L5o-09-gpu" sceneMemberID="viewController">
+                <viewController id="L5o-09-gpu" customClass="RecordViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8e-Dp-LfL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXt-u5-N0q">
+                                <rect key="frame" x="174" y="438.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qOF-0h-meW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sXt-u5-N0q" firstAttribute="centerY" secondItem="qOF-0h-meW" secondAttribute="centerY" id="3Uu-cQ-uJY"/>
+                            <constraint firstItem="sXt-u5-N0q" firstAttribute="centerX" secondItem="qOF-0h-meW" secondAttribute="centerX" id="Avk-hT-XmC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Рекорд" id="ElQ-WW-uKc"/>
+                    <navigationItem key="navigationItem" title="Рекорд" id="ElQ-WW-uKc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SrV-ls-LQh">
+                            <connections>
+                                <action selector="closeVC:" destination="L5o-09-gpu" id="JL1-1i-Cbn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recordLabel" destination="sXt-u5-N0q" id="p9t-3s-Ra4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGJ-40-NDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="-793"/>
+            <point key="canvasLocation" x="1293.8461538461538" y="-793.3649289099526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tdF-Re-9Ua">
@@ -562,7 +584,28 @@
             </objects>
             <point key="canvasLocation" x="-474" y="-112"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="siO-OY-oJo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gIX-jp-HOE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N34-80-R6W">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L5o-09-gpu" kind="relationship" relationship="rootViewController" id="J0S-tA-AYq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJj-dk-CUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364.61538461538458" y="-793.3649289099526"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cIQ-fT-qLw"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
