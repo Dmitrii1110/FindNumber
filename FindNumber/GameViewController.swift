@@ -7,6 +7,8 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    
+    // MARK: - PROPERTIES
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -14,6 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     
     @IBOutlet weak var newGameButton: UIButton!
+    
     lazy var game = Game(countItems: buttons.count) { [weak self] (status, time) in
         //?
         
@@ -23,6 +26,7 @@ class GameViewController: UIViewController {
         self.updateInfoGame(with: status)
     }
     
+    // MARK: - LIFE CYCLE
     //метод когда пользователь выходит из активити (игры)
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -31,6 +35,12 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let x = 10
+//        let y = 5
+//        
+//        //let sum = sumNumbers(x: x, y: y)
+//        print(sum)
         
         setupScreen()
         
